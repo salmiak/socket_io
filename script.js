@@ -1,5 +1,9 @@
 var scale = chroma.scale(['#4488DD', '#FFA900', '#F52']);
 
+function random(m, s) {
+  return m + 2.0 * s * (Math.random() + Math.random() + Math.random() - 1.5);
+}
+
 $(function () {
 
   var socket = io();
@@ -26,11 +30,16 @@ $(function () {
   })
 
   setInterval(function(){
-    var output = value + Math.round(Math.random()*6) - 3;
-    output = Math.max(0,output);
-    output = Math.min(50, output);
-    $('#counter').html(output)
-    $('body').css('background',scale(output/50))
-  },750);
+    var output = value + Math.random()*6 - 3;
+    output = random(value, .5);
+    output = Math.max(0,output)
+    output = Math.min(50, output)
+
+    $('#scale').css('background',scale(output/50))
+    $('#marker').css('bottom', output / 50 * ( $('#scale').height() - $('#marker').height() ) )
+
+    $('#markerNbr').html(Math.round(output))
+    $('#markerNbr').css('bottom', output / 50 * ( $('#scale').height() - $('#markerNbr').height() ) )
+  },500);
 
 });

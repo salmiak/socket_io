@@ -34,14 +34,14 @@ io.on('connection', function(socket){
     console.log(value);
   });
   socket.on('value up', function(){
-    if (value < 50){
+    if (value < 49){
       value++
       io.emit('value updated', value);
       console.log(value);
     }
   });
   socket.on('value down', function(){
-    if (value > 0) {
+    if (value > 1) {
       value--
       io.emit('value updated', value);
       console.log(value);
