@@ -19,6 +19,12 @@ app.get('/script.js', function(req, res){
 app.get('/style.css', function(req, res){
   res.sendFile(__dirname + '/style.css')
 })
+app.get('/manifest.json', function(req, res){
+  res.sendFile(__dirname + '/manifest.json')
+})
+app.get('/launcher-icon.png', function(req, res){
+  res.sendFile(__dirname + '/launcher-icon.png')
+})
 
 console.log(value);
 
