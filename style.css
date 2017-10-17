@@ -27,11 +27,11 @@ h1 {
 #scale {
   background: #555;
   transition: background .5s;
-  width: 10vw;
-  height: 60vh;
-  border-radius: 10vw;
+  width: 6vh;
+  height: 55vh;
+  border-radius: 6vh;
   position: absolute;
-  top: 21vh;
+  top: 20vh;
   left: 50%;
   transform: translate(-50%, 0);
   box-shadow: 0 0 .7vh .2vh rgba(0,0,0,0.54),
@@ -45,11 +45,11 @@ h1 {
 #scale:after {
   display: block;
   content: '';
-  height: 4px;
-  width: 14vw;
+  height: .5vh;
+  width: 6vh;
   position: absolute;
-  top: 5vh;
-  left: -2vw;
+  top: 2.5vh;
+  left: 0;
   z-index: 0;
   background: rgba(255,255,255,.54);
   box-shadow: 0 10vh 0 rgba(255,255,255,.54),
@@ -58,26 +58,52 @@ h1 {
               0 40vh 0 rgba(255,255,255,.54),
               0 50vh 0 rgba(255,255,255,.54);
 }
+#scale:before {
+  display: block;
+  content: '';
+  height: .25vh;
+  width: 2vh;
+  position: absolute;
+  top: 5vh;
+  left: 2vh;
+  z-index: 0;
+  border-radius: 1vh;
+  background: rgba(255,255,255,.54);
+  box-shadow: 0 2.5vh 0 rgba(255,255,255,.54),
+              0 5vh 0 rgba(255,255,255,.54),
+              0 10vh 0 rgba(255,255,255,.54),
+              0 12.5vh 0 rgba(255,255,255,.54),
+              0 15vh 0 rgba(255,255,255,.54),
+              0 20vh 0 rgba(255,255,255,.54),
+              0 22.5vh 0 rgba(255,255,255,.54),
+              0 25vh 0 rgba(255,255,255,.54),
+              0 30vh 0 rgba(255,255,255,.54),
+              0 32.5vh 0 rgba(255,255,255,.54),
+              0 35vh 0 rgba(255,255,255,.54),
+              0 40vh 0 rgba(255,255,255,.54),
+              0 42.5vh 0 rgba(255,255,255,.54),
+              0 45vh 0 rgba(255,255,255,.54);
+}
 #markerNbr {
   position: absolute;
-  font-size: 6vh;
-  line-height: 6vh;
+  font-size: 4.5vh;
+  line-height: 3.5vh;
   padding: 1vh 0 0;
   width: 100%;
   text-align: center;
   transition: bottom .5s;
-  text-shadow: 0 1vw 1vw rgba(0,0,0,0.24);
+  text-shadow: 0 1vh 1vh rgba(0,0,0,0.24);
 }
 #marker {
   position: absolute;
-  width: 7vw;
-  height: 7vw;
-  left: 1.5vw;
-  right: 1.5vw;
+  width: 4.5vh;
+  height: 4.5vh;
+  left: .75vh;
+  right: .75vh;
   z-index: 100;
   background: #EEE;
-  box-shadow: 0 0 0 .5vw #FFF inset, 0 1vw 1vw rgba(0,0,0,0.24);
-  border-radius: 8vw;
+  box-shadow: 0 0 0 .5vh #FFF inset, 0 1vh 1vh rgba(0,0,0,0.24);
+  border-radius: 10vh;
   text-align: center;
   transition: bottom .5s;
   font-size: 0;
@@ -86,13 +112,12 @@ h1 {
 #marker:before {
   display: block;
   content: '';
-  width: 7vw;
-  height: 1vw;
+  width: 3vh;
+  height: .5vh;
   position: absolute;
-  left: 0;
-  top: 3vw;
+  left: .75vh;
+  top: 2vh;
   background: #FFF;
-  box-shadow: 0 .15vw .4vw rgba(0,0,0,0.34);
   border-radius: .5vw;
 }
 
@@ -101,13 +126,13 @@ h1 {
   bottom: 0;
   left: 0;
   right: 0;
-  height: 16vh;
+  height: 12vh;
 }
 button {
-  font-size: 6vh;
+  font-size: 5vh;
   background: none;
   width: 40%;
-  height: 10vh;
+  height: 8vh;
   border: .7vh solid #FFF;
   border-radius: 5vh;
 }
