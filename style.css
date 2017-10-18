@@ -25,6 +25,7 @@ h1 {
 }
 
 #scale {
+  overflow: visible;
   background: #555;
   transition: background .5s;
   width: 6vh;
@@ -84,6 +85,26 @@ h1 {
               0 42.5vh 0 rgba(255,255,255,.54),
               0 45vh 0 rgba(255,255,255,.54);
 }
+#good, #bad {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%,0);
+  font-size: 4vh;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding-left: 0.1em;
+}
+#good {
+  top: -7.2vh;
+  color: #F73;
+  text-shadow: 0 0 1.5vh #F52;
+}
+#bad {
+  bottom: -7.7vh;;
+  color: #6DF;
+  text-shadow: 0 0 1.5vh #4488DD;
+}
+
 #markerNbr {
   position: absolute;
   font-size: 4.5vh;
